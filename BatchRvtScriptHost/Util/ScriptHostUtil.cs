@@ -35,10 +35,7 @@ namespace BatchRvt.ScriptHost
         private const string BatchScriptHostFilename = "revit_script_host.py";
         private const string BATCHRVT_SCRIPTS_FOLDER_PATH__ENVIRONMENT_VARIABLE_NAME = "BATCHRVT__SCRIPTS_FOLDER_PATH";
 
-        public static void ExecuteBatchScriptHost(
-                string pluginFolderPath,
-                object uiApplicationObject
-            )
+        public static void ExecuteBatchScriptHost(string pluginFolderPath, object uiApplicationObject)
         {
             var environmentVariables = GetEnvironmentVariables();
 

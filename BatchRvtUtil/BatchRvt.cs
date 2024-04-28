@@ -32,11 +32,36 @@ namespace BatchRvtUtil
     {
         public const string SCRIPTS_FOLDER_NAME = "Scripts";
 
-        public enum CentralFileOpenOption { Detach = 0, CreateNewLocal = 1 }
-        public enum RevitSessionOption { UseSeparateSessionPerFile = 0, UseSameSessionForFilesOfSameVersion = 1 }
-        public enum RevitProcessingOption { BatchRevitFileProcessing = 0, SingleRevitTaskProcessing = 1 }
-        public enum RevitFileProcessingOption { UseFileRevitVersionIfAvailable = 0, UseSpecificRevitVersion = 1 }
-        public enum WorksetConfigurationOption { CloseAllWorksets = 0, OpenAllWorksets = 1, OpenLastViewed = 2 }
+        public enum CentralFileOpenOption
+        {
+            Detach = 0,
+            CreateNewLocal = 1
+        }
+
+        public enum RevitSessionOption
+        {
+            UseSeparateSessionPerFile = 0,
+            UseSameSessionForFilesOfSameVersion = 1
+        }
+
+        public enum RevitProcessingOption
+        {
+            BatchRevitFileProcessing = 0,
+            SingleRevitTaskProcessing = 1
+        }
+
+        public enum RevitFileProcessingOption
+        {
+            UseFileRevitVersionIfAvailable = 0,
+            UseSpecificRevitVersion = 1
+        }
+
+        public enum WorksetConfigurationOption
+        {
+            CloseAllWorksets = 0,
+            OpenAllWorksets = 1,
+            OpenLastViewed = 2
+        }
 
         private const string SCRIPT_DATA_FOLDER_NAME = "BatchRvt";
 
@@ -107,7 +132,7 @@ namespace BatchRvtUtil
             }
 
             var psi = new ProcessStartInfo(Path.Combine(baseDirectory, "BatchRvt.exe"));
-            
+
             psi.UseShellExecute = false;
             psi.WorkingDirectory = baseDirectory;
             psi.Arguments = ConstructCommandLineArguments(batchRvtOptions);
@@ -121,10 +146,7 @@ namespace BatchRvtUtil
             return batchRvtProcess;
         }
 
-        public static void ExecuteMonitorScript(
-                string batchRvtFolderPath,
-                CommandSettings.Data commandSettingsData = null
-            )
+        public static void ExecuteMonitorScript(string batchRvtFolderPath, CommandSettings.Data commandSettingsData = null)
         {
             var engine = ScriptUtil.CreatePythonEngine();
 
@@ -132,26 +154,16 @@ namespace BatchRvtUtil
 
             var scriptsFolderPath = Path.Combine(batchRvtFolderPath, SCRIPTS_FOLDER_NAME);
 
-            var monitorScriptFilePath = Path.Combine(
-                    scriptsFolderPath,
-                    MONITOR_SCRIPT_FILE_NAME
-                );
+            var monitorScriptFilePath = Path.Combine(scriptsFolderPath, MONITOR_SCRIPT_FILE_NAME);
 
-            ScriptUtil.AddSearchPaths(
-                    engine,
-                    new[] {
-                        scriptsFolderPath,
-                        batchRvtFolderPath
-                    }
-                );
+            ScriptUtil.AddSearchPaths(engine, new[] { scriptsFolderPath, batchRvtFolderPath });
 
-            ScriptUtil.AddBuiltinVariables(
-                    engine,
-                    new Dictionary<string, object> {
-                        { "__scope__", mainModuleScope },
-                        { "__command_settings_data__", commandSettingsData }
-                    }
-                );
+            ScriptUtil.AddBuiltinVariables(engine,
+                                           new Dictionary<string, object>
+                                           {
+                                               { "__scope__", mainModuleScope },
+                                               { "__command_settings_data__", commandSettingsData }
+                                           });
 
             ScriptUtil.AddPythonStandardLibrary(mainModuleScope);
 
@@ -180,8 +192,12 @@ namespace BatchRvtUtil
         public static bool IsBatchRvtAddinInstalled(RevitVersion.SupportedRevitVersion revitVersion)
         {
             bool isAddinInstalled = false;
-            
-            var revitAddinsBaseFolders = new [] { Environment.SpecialFolder.CommonApplicationData, Environment.SpecialFolder.ApplicationData };
+
+            var revitAddinsBaseFolders = new[]
+            {
+                Environment.SpecialFolder.CommonApplicationData,
+                Environment.SpecialFolder.ApplicationData
+            };
 
             var revitAddinsFolderPaths = revitAddinsBaseFolders.Select(f => RevitVersion.GetRevitAddinsFolderPath(revitVersion, f)).ToList();
 

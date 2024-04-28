@@ -50,9 +50,9 @@
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(308, 185);
+            this.cancelButton.Location = new System.Drawing.Point(398, 182);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.Size = new System.Drawing.Size(75, 21);
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             this.startScanButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.startScanButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.startScanButton.Location = new System.Drawing.Point(164, 185);
+            this.startScanButton.Location = new System.Drawing.Point(254, 182);
             this.startScanButton.Name = "startScanButton";
-            this.startScanButton.Size = new System.Drawing.Size(138, 23);
+            this.startScanButton.Size = new System.Drawing.Size(138, 21);
             this.startScanButton.TabIndex = 1;
             this.startScanButton.Text = "Start Scanning";
             this.startScanButton.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // 
             this.optionsGroupBox.Controls.Add(this.otherOptionsGroupBox);
             this.optionsGroupBox.Controls.Add(this.revitFileTypesGroupBox);
-            this.optionsGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.optionsGroupBox.Location = new System.Drawing.Point(12, 11);
             this.optionsGroupBox.Name = "optionsGroupBox";
-            this.optionsGroupBox.Size = new System.Drawing.Size(372, 163);
+            this.optionsGroupBox.Size = new System.Drawing.Size(461, 150);
             this.optionsGroupBox.TabIndex = 0;
             this.optionsGroupBox.TabStop = false;
             this.optionsGroupBox.Text = "Options";
@@ -86,9 +86,9 @@
             this.otherOptionsGroupBox.Controls.Add(this.detectRevitFileVersionCheckBox);
             this.otherOptionsGroupBox.Controls.Add(this.expandNetworkPathsCheckBox);
             this.otherOptionsGroupBox.Controls.Add(this.includeSubfoldersCheckBox);
-            this.otherOptionsGroupBox.Location = new System.Drawing.Point(165, 19);
+            this.otherOptionsGroupBox.Location = new System.Drawing.Point(192, 18);
             this.otherOptionsGroupBox.Name = "otherOptionsGroupBox";
-            this.otherOptionsGroupBox.Size = new System.Drawing.Size(194, 134);
+            this.otherOptionsGroupBox.Size = new System.Drawing.Size(255, 124);
             this.otherOptionsGroupBox.TabIndex = 1;
             this.otherOptionsGroupBox.TabStop = false;
             this.otherOptionsGroupBox.Text = "Additional Options";
@@ -98,9 +98,9 @@
             this.ignoreBackupFilesCheckBox.AutoSize = true;
             this.ignoreBackupFilesCheckBox.Checked = true;
             this.ignoreBackupFilesCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ignoreBackupFilesCheckBox.Location = new System.Drawing.Point(6, 88);
+            this.ignoreBackupFilesCheckBox.Location = new System.Drawing.Point(6, 81);
             this.ignoreBackupFilesCheckBox.Name = "ignoreBackupFilesCheckBox";
-            this.ignoreBackupFilesCheckBox.Size = new System.Drawing.Size(167, 17);
+            this.ignoreBackupFilesCheckBox.Size = new System.Drawing.Size(210, 16);
             this.ignoreBackupFilesCheckBox.TabIndex = 4;
             this.ignoreBackupFilesCheckBox.Text = "Ignore backup files (.0001.rvt)";
             this.ignoreBackupFilesCheckBox.UseVisualStyleBackColor = true;
@@ -108,18 +108,18 @@
             // asteriskNoteLabel
             // 
             this.asteriskNoteLabel.AutoSize = true;
-            this.asteriskNoteLabel.Location = new System.Drawing.Point(22, 108);
+            this.asteriskNoteLabel.Location = new System.Drawing.Point(22, 100);
             this.asteriskNoteLabel.Name = "asteriskNoteLabel";
-            this.asteriskNoteLabel.Size = new System.Drawing.Size(162, 13);
+            this.asteriskNoteLabel.Size = new System.Drawing.Size(203, 12);
             this.asteriskNoteLabel.TabIndex = 3;
             this.asteriskNoteLabel.Text = "(*) appears as additional columns";
             // 
             // detectRevitFileVersionCheckBox
             // 
             this.detectRevitFileVersionCheckBox.AutoSize = true;
-            this.detectRevitFileVersionCheckBox.Location = new System.Drawing.Point(6, 65);
+            this.detectRevitFileVersionCheckBox.Location = new System.Drawing.Point(6, 60);
             this.detectRevitFileVersionCheckBox.Name = "detectRevitFileVersionCheckBox";
-            this.detectRevitFileVersionCheckBox.Size = new System.Drawing.Size(178, 17);
+            this.detectRevitFileVersionCheckBox.Size = new System.Drawing.Size(234, 16);
             this.detectRevitFileVersionCheckBox.TabIndex = 2;
             this.detectRevitFileVersionCheckBox.Text = "Extract Revit File Version Info (*)";
             this.detectRevitFileVersionCheckBox.UseVisualStyleBackColor = true;
@@ -127,9 +127,9 @@
             // expandNetworkPathsCheckBox
             // 
             this.expandNetworkPathsCheckBox.AutoSize = true;
-            this.expandNetworkPathsCheckBox.Location = new System.Drawing.Point(6, 42);
+            this.expandNetworkPathsCheckBox.Location = new System.Drawing.Point(6, 39);
             this.expandNetworkPathsCheckBox.Name = "expandNetworkPathsCheckBox";
-            this.expandNetworkPathsCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.expandNetworkPathsCheckBox.Size = new System.Drawing.Size(144, 16);
             this.expandNetworkPathsCheckBox.TabIndex = 1;
             this.expandNetworkPathsCheckBox.Text = "Expand Network paths";
             this.expandNetworkPathsCheckBox.UseVisualStyleBackColor = true;
@@ -137,9 +137,9 @@
             // includeSubfoldersCheckBox
             // 
             this.includeSubfoldersCheckBox.AutoSize = true;
-            this.includeSubfoldersCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.includeSubfoldersCheckBox.Location = new System.Drawing.Point(6, 18);
             this.includeSubfoldersCheckBox.Name = "includeSubfoldersCheckBox";
-            this.includeSubfoldersCheckBox.Size = new System.Drawing.Size(114, 17);
+            this.includeSubfoldersCheckBox.Size = new System.Drawing.Size(132, 16);
             this.includeSubfoldersCheckBox.TabIndex = 0;
             this.includeSubfoldersCheckBox.Text = "Include Subfolders";
             this.includeSubfoldersCheckBox.UseVisualStyleBackColor = true;
@@ -149,9 +149,9 @@
             this.revitFileTypesGroupBox.Controls.Add(this.revitFilesRadioButton);
             this.revitFileTypesGroupBox.Controls.Add(this.projectFilesRadioButton);
             this.revitFileTypesGroupBox.Controls.Add(this.familyFilesRadioButton);
-            this.revitFileTypesGroupBox.Location = new System.Drawing.Point(6, 19);
+            this.revitFileTypesGroupBox.Location = new System.Drawing.Point(6, 18);
             this.revitFileTypesGroupBox.Name = "revitFileTypesGroupBox";
-            this.revitFileTypesGroupBox.Size = new System.Drawing.Size(153, 134);
+            this.revitFileTypesGroupBox.Size = new System.Drawing.Size(180, 124);
             this.revitFileTypesGroupBox.TabIndex = 0;
             this.revitFileTypesGroupBox.TabStop = false;
             this.revitFileTypesGroupBox.Text = "Revit File Types";
@@ -159,9 +159,9 @@
             // revitFilesRadioButton
             // 
             this.revitFilesRadioButton.AutoSize = true;
-            this.revitFilesRadioButton.Location = new System.Drawing.Point(6, 65);
+            this.revitFilesRadioButton.Location = new System.Drawing.Point(6, 60);
             this.revitFilesRadioButton.Name = "revitFilesRadioButton";
-            this.revitFilesRadioButton.Size = new System.Drawing.Size(135, 17);
+            this.revitFilesRadioButton.Size = new System.Drawing.Size(167, 16);
             this.revitFilesRadioButton.TabIndex = 2;
             this.revitFilesRadioButton.Text = "Project and Family Files";
             this.revitFilesRadioButton.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // 
             this.projectFilesRadioButton.AutoSize = true;
             this.projectFilesRadioButton.Checked = true;
-            this.projectFilesRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.projectFilesRadioButton.Location = new System.Drawing.Point(6, 18);
             this.projectFilesRadioButton.Name = "projectFilesRadioButton";
-            this.projectFilesRadioButton.Size = new System.Drawing.Size(82, 17);
+            this.projectFilesRadioButton.Size = new System.Drawing.Size(101, 16);
             this.projectFilesRadioButton.TabIndex = 0;
             this.projectFilesRadioButton.TabStop = true;
             this.projectFilesRadioButton.Text = "Project Files";
@@ -181,18 +181,18 @@
             // familyFilesRadioButton
             // 
             this.familyFilesRadioButton.AutoSize = true;
-            this.familyFilesRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.familyFilesRadioButton.Location = new System.Drawing.Point(6, 39);
             this.familyFilesRadioButton.Name = "familyFilesRadioButton";
-            this.familyFilesRadioButton.Size = new System.Drawing.Size(78, 17);
+            this.familyFilesRadioButton.Size = new System.Drawing.Size(95, 16);
             this.familyFilesRadioButton.TabIndex = 1;
             this.familyFilesRadioButton.Text = "Family Files";
             this.familyFilesRadioButton.UseVisualStyleBackColor = true;
             // 
             // RevitFileScanningOptionsUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 220);
+            this.ClientSize = new System.Drawing.Size(485, 214);
             this.Controls.Add(this.optionsGroupBox);
             this.Controls.Add(this.startScanButton);
             this.Controls.Add(this.cancelButton);

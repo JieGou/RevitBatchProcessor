@@ -27,16 +27,17 @@ namespace BatchRvtUtil
 {
     public static class RevitVersion
     {
-        public enum SupportedRevitVersion {
-                Revit2015 = 0,
-                Revit2016 = 1,
-                Revit2017 = 2,
-                Revit2018 = 3,
-                Revit2019 = 4,
-                Revit2020 = 5,
-                Revit2021 = 6,
-                Revit2022 = 7,
-                Revit2023 = 8
+        public enum SupportedRevitVersion
+        {
+            Revit2015 = 0,
+            Revit2016 = 1,
+            Revit2017 = 2,
+            Revit2018 = 3,
+            Revit2019 = 4,
+            Revit2020 = 5,
+            Revit2021 = 6,
+            Revit2022 = 7,
+            Revit2023 = 8
         }
 
         private const string REVIT_EXECUTABLE_FILE_NAME = "Revit.exe";
@@ -69,14 +70,14 @@ namespace BatchRvtUtil
                 { SupportedRevitVersion.Revit2023, "2023" }
             };
 
-        private static Dictionary<SupportedRevitVersion,string> REVIT_EXECUTABLE_FOLDER_PATHS()
+        private static Dictionary<SupportedRevitVersion, string> REVIT_EXECUTABLE_FOLDER_PATHS()
         {
             var revitInstallPaths = new Dictionary<SupportedRevitVersion, string>();
             foreach (var versionName in Enum.GetNames(typeof(SupportedRevitVersion)))
             {
                 SupportedRevitVersion enumOfVersion = (SupportedRevitVersion)Enum.Parse(typeof(SupportedRevitVersion), versionName);
 
-                var installLocation = GetRevitInstallPath(enumOfVersion); 
+                var installLocation = GetRevitInstallPath(enumOfVersion);
                 if (installLocation == null)
                 {
                     continue;
@@ -89,7 +90,7 @@ namespace BatchRvtUtil
 
         private static string GetRevitInstallPath(SupportedRevitVersion revitVersion)
         {
-            var versionName = Enum.GetName(typeof(SupportedRevitVersion), revitVersion); 
+            var versionName = Enum.GetName(typeof(SupportedRevitVersion), revitVersion);
             var version = versionName?.Remove(0, 5);
             var appPath = $@"SOFTWARE\Autodesk\Revit\{version}";
             if (appPath == null) throw new ArgumentNullException(nameof(appPath));
@@ -109,7 +110,6 @@ namespace BatchRvtUtil
                     }
 
                     revitSubkey = revitKey;
-
                 }
                 if (revitSubkey == null)
                 {
@@ -131,7 +131,6 @@ namespace BatchRvtUtil
 
         public static string GetRevitExecutableFolderPath(SupportedRevitVersion revitVersion)
         {
-
             if (GetRevitInstallPath(revitVersion) == null)
             {
                 return null;

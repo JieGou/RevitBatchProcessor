@@ -50,11 +50,11 @@ namespace BatchRvtUtil
         // Pre-processing Script settings
         public readonly BooleanSetting ExecutePreProcessingScript = new BooleanSetting("executePreProcessingScript");
         public readonly StringSetting PreProcessingScriptFilePath = new StringSetting("preProcessingScriptFilePath");
-        
+
         // Post-processing Script settings
         public readonly BooleanSetting ExecutePostProcessingScript = new BooleanSetting("executePostProcessingScript");
         public readonly StringSetting PostProcessingScriptFilePath = new StringSetting("PostProcessingScriptFilePath");
-        
+
         // Central File Processing settings
         public readonly EnumSetting<BatchRvt.CentralFileOpenOption> CentralFileOpenOption = new EnumSetting<BatchRvt.CentralFileOpenOption>("centralFileOpenOption");
         public readonly BooleanSetting DeleteLocalAfter = new BooleanSetting("deleteLocalAfter");
@@ -83,7 +83,8 @@ namespace BatchRvtUtil
         public BatchRvtSettings()
         {
             this.persistentSettings = new PersistentSettings(
-                    new IPersistent[] {
+                    new IPersistent[]
+                    {
                         this.TaskScriptFilePath,
                         this.ShowMessageBoxOnTaskScriptError,
                         this.ProcessingTimeOutInMinutes,
